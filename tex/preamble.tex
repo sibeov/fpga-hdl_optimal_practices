@@ -1,0 +1,60 @@
+% documentclass
+\documentclass[a4paper]{book}
+
+% geometry
+\usepackage[top=2.54cm, left=2.54cm, right=2.54cm, bottom=2cm]{geometry}
+
+% enumerate
+\usepackage{enumerate}
+
+% wrapfigure
+\usepackage{wrapfig}
+
+% enumitem
+\usepackage{enumitem}
+% 
+% adjustbox
+\usepackage[export]{adjustbox}
+
+% biblatex
+\usepackage[backend=biber,style=ieee,autocite=inline,natbib=true]{biblatex}
+\DeclareLanguageMapping{english}{english-apa}
+\addbibresource{../bib/references.bib}
+\bibliography{references}
+
+% lastpage
+\usepackage{lastpage}
+
+% header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage\ of \pageref{LastPage}}
+\fancyhead[L]{}
+\fancyhead[R]{}
+
+% inputenc
+\usepackage[utf8]{inputenc}
+
+% babel
+\usepackage[english]{babel}
+
+% csquotes
+\usepackage{csquotes}
+
+% graphicx
+\usepackage{graphicx}
+\graphicspath{{../images/}}
+
+% subcaption
+\usepackage{subcaption}
+
+% amsmath
+\usepackage{amsmath}
+
+% minted
+\usepackage{minted}
+\include{./minted_settings.tex}
+
+% hyperref:
+\usepackage[hidelinks]{hyperref}
