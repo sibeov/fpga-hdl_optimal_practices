@@ -18,10 +18,7 @@ knowledge base for the initial author. This README and the project in general is
 - [6. Building the document](#6-building-the-document)
 	- [6.1. Dependencies](#61-dependencies)
 		- [6.1.1. Windows](#611-windows)
-			- [6.1.1.1. MikTex](#6111-miktex)
 		- [6.1.2. Linux - Ubuntu](#612-linux---ubuntu)
-			- [6.1.2.1. TexLive](#6121-texlive)
-			- [6.1.2.2. pygments](#6122-pygments)
 	- [6.2. Build](#62-build)
 
 # 3. Scope
@@ -56,18 +53,36 @@ See `specifications.md` in `doc` folder for more info with regards to rules and 
 6. Provide suggestions to topics to include in the book.
 
 # 6. Building the document
+
 ## 6.1. Dependencies
+
 ### 6.1.1. Windows
-#### 6.1.1.1. MikTex
-[Install MikTex](https://miktex.org/howto/install-miktex)
+- MikTex
+	- [Install MikTex](https://miktex.org/howto/install-miktex)
+  		```shell
+  		winget install miktex
+  		```
+- pygments
+	```shell
+	pip install pygments
+	```
+
 ### 6.1.2. Linux - Ubuntu
-#### 6.1.2.1. TexLive
-`sudo apt-get install texlive-full`
-#### 6.1.2.2. pygments
-`python3 -m pip install pygments`
+- TexLive
+  ```shell
+  sudo apt-get install texlive-full
+  ```
+- pygments
+  ```shell
+  python3 -m pip install pygments
+  ```
+
 ## 6.2. Build
 Should be the same for all OSs.
 ```
-cd tex
+# Clone repo
+git clone <repo_url> [<local_repo_path>]
+cd <local_repo_path>/tex
+# Initialize continous latexbuild process
 latexmk -pdf -pvc -outdir=../out -shell-escape top.tex
 ```
