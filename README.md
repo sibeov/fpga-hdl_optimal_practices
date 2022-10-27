@@ -54,7 +54,8 @@ See `specifications.md` in `doc` folder for more info with regards to rules and 
 4. Spell-checking and proof-writing.
 5. Formalizing the rules and specifications of the book and also:
    * Reviews of rules and specifications
-6. Provide suggestions to topics to include in the book.
+6. Provide suggestions to topics to include in the book by submitting issues.
+7. Engage in discussions here (or in a future Discord server) by submitting issues.
 
 More to come!
 
