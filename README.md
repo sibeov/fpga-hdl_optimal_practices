@@ -35,8 +35,8 @@ The hope and intention is for this book-(project) to be driven by FPGA-communiti
 industry.
 
 ## 4.2. FPGA- vs ASIC-development
-The initial author has currently no background in ASIC-development, but there should be noe problem in having both
-branches of the industry included.
+The initial author has currently no background in ASIC-development, but there should be no problem representing both
+branches.
 
 ## 4.3. HDLs
 The book is HDL-agnostic, meaning that VHDL, (System)verilog etc shall be equally represented with source-code examples
