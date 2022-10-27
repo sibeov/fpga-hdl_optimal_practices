@@ -15,11 +15,15 @@ knowledge base for the initial author. This README and the project in general is
 	- [4.3. HDLs](#43-hdls)
 - [5. Contributions](#5-contributions)
 	- [5.1. How](#51-how)
-- [6. Building the document](#6-building-the-document)
-	- [6.1. Dependencies](#61-dependencies)
-		- [6.1.1. Windows](#611-windows)
-		- [6.1.2. Linux - Ubuntu](#612-linux---ubuntu)
-	- [6.2. Build](#62-build)
+- [6. Building the book](#6-building-the-book)
+	- [6.1. Editor](#61-editor)
+	- [6.2. Dependencies](#62-dependencies)
+		- [6.2.1. Windows](#621-windows)
+		- [6.2.2. Linux - Ubuntu](#622-linux---ubuntu)
+	- [6.3. Build](#63-build)
+		- [6.3.1. NB!](#631-nb)
+- [7. Notes](#7-notes)
+	- [7.1. LaTex Macros](#71-latex-macros)
 
 # 3. Scope
 See `scope.md` in `doc` directory.
@@ -52,22 +56,33 @@ See `specifications.md` in `doc` folder for more info with regards to rules and 
    * Reviews of rules and specifications
 6. Provide suggestions to topics to include in the book.
 
-# 6. Building the document
+More to come!
 
-## 6.1. Dependencies
+# 6. Building the book
 
-### 6.1.1. Windows
+## 6.1. Editor
+Use any prefered text-editor / IDE.
+
+## 6.2. Dependencies
+
+### 6.2.1. Windows
+- Python
+  - [Install Python](https://www.python.org/downloads/) or if you have winget:
+	```shell
+	winget install python --source (winget|msstore)
+	```
+
 - MikTex
-	- [Install MikTex](https://miktex.org/howto/install-miktex)
+	- [Install MikTex](https://miktex.org/howto/install-miktex) or if you have winget:
   		```shell
-  		winget install miktex
+  		winget install miktex --source winget
   		```
 - pygments
 	```shell
 	pip install pygments
 	```
 
-### 6.1.2. Linux - Ubuntu
+### 6.2.2. Linux - Ubuntu
 - TexLive
   ```shell
   sudo apt-get install texlive-full
@@ -77,12 +92,21 @@ See `specifications.md` in `doc` folder for more info with regards to rules and 
   python3 -m pip install pygments
   ```
 
-## 6.2. Build
+## 6.3. Build
 Should be the same for all OSs.
 ```
 # Clone repo
 git clone <repo_url> [<local_repo_path>]
-cd <local_repo_path>/tex
+cd <local_repo_path>
 # Initialize continous latexbuild process
 latexmk -pdf -pvc -outdir=../out -shell-escape top.tex
 ```
+
+### 6.3.1. NB!
+Must be built from root of project such that the LaTex macros works.
+
+# 7. Notes
+
+## 7.1. LaTex Macros
+All macros defined in a LaTex document is relative to the `latexmk` process path. So if the `latexmk` commands is
+invoked at the root of the project, all macros are relativ to that root-path.

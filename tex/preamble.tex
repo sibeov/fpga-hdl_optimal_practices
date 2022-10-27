@@ -2,7 +2,7 @@
 \documentclass[a4paper]{book}
 
 % geometry
-\usepackage[top=2.54cm, left=2.54cm, right=2.54cm, bottom=2cm]{geometry}
+\usepackage[top=2.54cm, left=2.54cm, right=2.54cm, bottom=2.54cm]{geometry}
 
 % enumerate
 \usepackage{enumerate}
@@ -12,14 +12,14 @@
 
 % enumitem
 \usepackage{enumitem}
-% 
+ 
 % adjustbox
 \usepackage[export]{adjustbox}
 
 % biblatex
 \usepackage[backend=biber,style=ieee,autocite=inline,natbib=true]{biblatex}
 \DeclareLanguageMapping{english}{english-apa}
-\addbibresource{../bib/references.bib}
+\addbibresource{\bibPath/references.bib}
 \bibliography{references}
 
 % lastpage
@@ -44,7 +44,7 @@
 
 % graphicx
 \usepackage{graphicx}
-\graphicspath{{../images/}}
+\graphicspath{{\imagePath}}
 
 % subcaption
 \usepackage{subcaption}
@@ -53,8 +53,13 @@
 \usepackage{amsmath}
 
 % minted
-\usepackage{minted}
-\include{./minted_settings.tex}
+\usepackage[outputdir=out]{minted}
+\input{\texPath/minted_settings.tex}
 
 % hyperref:
 \usepackage[hidelinks]{hyperref}
+
+% Document parameters
+\title{HDL \- Optimal Practices}
+\author{FPGA- and ASIC-developers}
+\date{2022}
