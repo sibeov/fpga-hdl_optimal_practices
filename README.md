@@ -83,6 +83,10 @@ Use any preferred text-editor / IDE.
 	```
 
 ### 6.2.2. Linux - Ubuntu
+- Python
+  ```shell
+  sudo apt-get install python3
+  ```
 - TexLive
   ```shell
   sudo apt-get install texlive-full
