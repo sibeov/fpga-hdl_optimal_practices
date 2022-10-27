@@ -1,9 +1,9 @@
 # 1. Introduction
 Inspired by Jason Turners book [Cpp - Best Practices](https://github.com/cpp-best-practices/cppbestpractices) and the
-fact that the initial author (@sibeov) miss something similar. This is an attempt to develop a forever changing,
+fact that the initial author miss something similar. This is an attempt to develop a forever changing,
 open-source and free book discussing, evaluating and always having up-to-date best practices in accordance with the
 FPGA-development industry. It is no attempt to rival similar books and is also something which started as a hobby and 
-knowledge base for the initial author. This README and the project in general is currently in the EXTREMLY early stages and is still work-in-progress.
+knowledge base for the initial author. This README and the project in general is currently in the EXTREMELY early stages and is still work-in-progress.
 
 # 2. Table of Content
 - [1. Introduction](#1-introduction)
@@ -31,7 +31,7 @@ See `scope.md` in `doc` directory.
 # 4. About
 
 ## 4.1. Intention and goals
-The hope and intention is for this book-(project) to be driven by FPGA-communities (all over the world) and the
+The hope and intention is for this book-(project) to be driven by FPGA-communities, all over the world, and the
 industry.
 
 ## 4.2. FPGA- vs ASIC-development
@@ -47,10 +47,10 @@ intention) and the rest of this project/book is prone to change.
 See `specifications.md` in `doc` folder for more info with regards to rules and structure of book.
 
 ## 5.1. How
-1. Debugging and writing LaTex (if needed).
+1. Debugging and writing LaTex
 2. Provide source-code examples.
 3. Translating source-code examples to other HDLs
-   * Like SystemVerilog -> VHDL and vica versa.
+   * Like SystemVerilog -> VHDL and vice versa.
 4. Spell-checking and proof-writing.
 5. Formalizing the rules and specifications of the book and also:
    * Reviews of rules and specifications
@@ -61,7 +61,7 @@ More to come!
 # 6. Building the book
 
 ## 6.1. Editor
-Use any prefered text-editor / IDE.
+Use any preferred text-editor / IDE.
 
 ## 6.2. Dependencies
 
@@ -98,7 +98,7 @@ Should be the same for all OSs.
 # Clone repo
 git clone <repo_url> [<local_repo_path>]
 cd <local_repo_path>
-# Initialize continous latexbuild process
+# Initialize continuos latex-build process
 latexmk -pdf -pvc -outdir=../out -shell-escape top.tex
 ```
 
@@ -109,4 +109,4 @@ Must be built from root of project such that the LaTex macros works.
 
 ## 7.1. LaTex Macros
 All macros defined in a LaTex document is relative to the `latexmk` process path. So if the `latexmk` commands is
-invoked at the root of the project, all macros are relativ to that root-path.
+invoked at the root of the project, all macros are relative to that root-path.
