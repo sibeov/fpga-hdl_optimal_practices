@@ -103,7 +103,7 @@ Should be the same for all OSs.
 git clone <repo_url> [<local_repo_path>]
 cd <local_repo_path>
 # Initialize continuos latex-build process
-latexmk -pdf -pvc -outdir=./out -shell-escape top.tex
+latexmk -pdf -pvc -outdir=./out --shell-escape top.tex
 ```
 
 ### 6.3.1. NB!
